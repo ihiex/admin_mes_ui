@@ -1,0 +1,93 @@
+<!--
+ * @Author: Jason.zou jason.zou1986@gmail.com
+ * @Date: 2024-03-13 09:25:14
+ * @LastEditors: Jason.zou jason.zou1986@gmail.com
+ * @LastEditTime: 2024-08-22 16:38:38
+ * @FilePath: \NewSFC_Web_UI\public\index.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0,minimun-scale=1,user-scalable=no" /> -->
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
+  <title>
+    <%= VUE_APP_TITLE %>
+  </title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <!-- 改成https时使用 -->
+  <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
+  <!-- <meta name="author" content="<%= VUE_APP_AUTHOR %>" /> -->
+  <link rel="stylesheet" href="<%= BASE_URL %>static/css/loading.css" />
+  <!-- excel相关引入 -->
+  <script type="text/javascript" src="static/lib/excel/xlsx.full.min.js"></script>
+  <!-- IE 的支持 -->
+  <script src="static/lib/html5shiv/html5shiv.min.js"></script>
+
+  <script src="static/config/config.js"></script>
+
+</head>
+
+<body>
+  <div id="Cosmo">
+    <!-- 加载动画 -->
+    <div class="first-loading-wrp">
+      <div class="loading-wrp">
+        <span class="dot dot-spin">
+          <i></i>
+          <i></i>
+          <i></i>
+          <i></i>
+        </span>
+      </div>
+      <h1>
+        <%= VUE_APP_TITLE %>
+      </h1>
+    </div>
+  </div>
+  <!-- 过站提示单 -->
+  <audio id="OKPlay" controls="controls" style="display: none">
+    <source src="/Sounds/OK.wav" type="audio/mp3" />
+    Your browser does not support this audio format.
+  </audio>
+
+  <audio id="NGPlay" controls="controls" style="display: none">
+    <source src="/Sounds/NG.wav" type="audio/mp3" />
+    Your browser does not support this audio format.
+  </audio>
+
+  <audio id="REPlay" controls="controls" style="display: none">
+    <source src="/Sounds/RE.wav" type="audio/mp3" />
+    Your browser does not support this audio format.
+  </audio>
+
+  <audio id="QCNGPlay" controls="controls" style="display: none">
+    <source src="/Sounds/QCNG.wav" type="audio/mp3" />
+    Your browser does not support this audio format.
+  </audio>
+
+  <audio id="SCRAPPlay" controls="controls" style="display: none">
+    <source src="/Sounds/SCRAP.wav" type="audio/mp3" />
+    Your browser does not support this audio format.
+  </audio>
+  <!--  <script>
+      if (window.location.hostname !== 'localhost') {
+        var _hmt = _hmt || []
+        ;(function () {
+          var hm = document.createElement('script')
+          hm.src = ''
+          var s = document.getElementsByTagName('script')[0]
+          s.parentNode.insertBefore(hm, s)
+        })()
+      }
+    </script> -->
+</body>
+
+</html>
+

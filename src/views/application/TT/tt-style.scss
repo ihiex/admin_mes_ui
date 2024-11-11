@@ -1,0 +1,10 @@
+.input_data{
+  ::v-deep{
+    .el-input__inner{
+      // border: 2px solid rgba(238 238 238 .7);
+      border-width: 2px;
+      // border-color: #666;
+      // background-color: rgba(2, 238, 41, 0.05);
+    }
+  }
+}

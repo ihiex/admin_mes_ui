@@ -1,0 +1,6 @@
+NODE_ENV='production'
+#VUE_APP_BASE_URL='https://172.16.10.165:54328'
+OUTPUT_DIR='output/default/dist'
+#VUE_APP_BASE_URL='https://172.16.52.21:44333'
+VUE_APP_BASE_URL='http://172.16.10.87:10063'
+VUE_APP_PROJECT_NAME='DG-T3Xpro'

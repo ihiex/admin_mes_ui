@@ -1,0 +1,201 @@
+.app_container {
+  height: inherit;
+  background-color: #fff;
+
+  .query_bar {
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+
+    .query_bar_title {
+      line-height: 36px;
+      padding: 0 10px;
+      box-sizing: border-box;
+
+      &>span {
+        float: left;
+      }
+
+      &>div {
+        float: right;
+        z-index: 100;
+
+        .color_value {
+          display: inline-block;
+          height: 15px;
+          width: 20px;
+          position: relative;
+          top: 2px;
+          margin-right: 10px;
+        }
+
+        .unfold_btn {
+          font-size: 22px;
+          cursor: pointer;
+          margin: 0 10px 0 20px;
+          position: relative;
+          top: 1px;
+          user-select: none;
+        }
+      }
+
+      border-bottom: 1px solid #eee;
+    }
+
+    .query_box {
+      padding-top: 10px;
+      // width: 100%;
+      overflow: auto;
+    }
+  }
+
+  .input_data {
+    min-height: 150px;
+    height: auto;
+    margin: auto;
+    width: 100%;
+
+    .input_box {
+      height: inherit;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .sn_container {
+        width: 100%;
+        height: inherit;
+
+        &.sn_input_box {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+        }
+
+        .box_container {
+          display: flex;
+          margin-bottom: 5px;
+
+          .box_title {
+            width: 80px;
+            min-width: 80px;
+            line-height: 30px;
+            text-align: right;
+            padding-right: 10px;
+          }
+
+          .box_number {
+            flex: 9;
+            // width: 100%;
+          }
+        }
+
+        .el-row {
+          margin-bottom: 10px;
+          width: 100%;
+        }
+
+        display: flex;
+
+        //TT箱子绑定扫描
+        .sn_container_left {
+          flex: 7;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          width: 100%;
+
+          &>div {
+            width: 100%;
+            overflow: auto;
+          }
+
+          .form_box {
+            overflow-y: auto;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &.sidebar {
+              margin-right: 20px;
+            }
+          }
+
+          .el-form {
+            width: 100%;
+            margin-top: 10px;
+          }
+
+          .sideslip_btn {
+            position: absolute;
+            top: 42%;
+            right: 0;
+            font-weight: 900;
+            font-size: 24px;
+            cursor: pointer;
+          }
+        }
+
+        .sn_container_right {
+          flex: 3;
+          overflow: auto;
+          display: flex;
+          border-left: 2px solid #ccc;
+          height: 100%;
+
+          &>div {
+            flex: 1;
+            height: 0;
+            width: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .msg_box {
+    overflow: hidden;
+    height: inherit;
+    // max-height: 100px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 100;
+    background-color: #fff;
+
+    .show_hint {
+      // height: calc(100% - 20px);
+      height: inherit;
+      box-sizing: border-box;
+      display: flex;
+      overflow: auto;
+
+      &>div {
+        flex: 1;
+        height: 0;
+        width: 0;
+        display: block;
+
+        p {
+          padding: 0 0 5px 5px
+        }
+      }
+
+      .success_info {
+        color: #85ce61;
+      }
+
+      .danger_info {
+        color: #f56c6c;
+      }
+
+      p {
+        padding: 0;
+        margin: 0;
+      }
+    }
+  }
+}

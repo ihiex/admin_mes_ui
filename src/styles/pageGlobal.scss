@@ -1,0 +1,377 @@
+//通用查询页面样式
+.app_container {
+    margin: 0;
+    padding: 0;
+    // min-width: 1245px;
+    overflow-x: auto;
+    height: inherit;
+    background-color: #fff;
+    .query_bar {
+        padding: 10px;
+        text-align: left;
+        display: flex;
+        position: relative;
+        background-color: #fff;
+
+        .query_btn {
+            min-width: 190px;
+            flex: 180px;
+            height: 30px;
+            position: absolute;
+            right: 5px;
+
+            .unfold_btn {
+                color: #41b584;
+                padding-left: 5px;
+                cursor: pointer;
+                user-select: none;
+
+                i {
+                    position: relative;
+                    left: -8px;
+                }
+            }
+        }
+
+        .query_box {
+            // min-width: 1044px;
+            box-sizing: border-box;
+            overflow: hidden;
+
+            .zy_box {
+                margin-bottom: 10px;
+                width: 340px;
+
+                .search_desc {
+                    text-align: right;
+                    line-height: 32px;
+                }
+
+                .search_box {
+                    text-align: left;
+                }
+            }
+        }
+    }
+
+    .utils_bar {
+        height: 36px;
+        line-height: 36px;
+        text-align: right;
+        padding: 0 10px;
+        background-color: #fff;
+        // border: #41b584 1px solid;
+    }
+
+    .table_content {
+        .table_style {
+            width: 100%;
+            //   height: calc(100vh - 220px);
+        }
+
+        .pagination {
+            .el-pagination {
+                text-align: right;
+            }
+        }
+    }
+}
+
+//系统管理特殊页面
+.pagination {
+    .el-pagination {
+        text-align: right;
+    }
+}
+
+/* 折叠动画 */
+.slide-fade-enter-active {
+    max-height: 100vh;
+    overflow: hidden;
+    transition: all 0.8s linear;
+}
+
+.slide-fade-leave-active {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s linear;
+}
+
+.slide-fade-enter,
+.slide-fade-leave-to {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s linear;
+}
+
+/* 图表页面样式 */
+.page_container {
+    margin: 0;
+    padding: 0;
+    overflow-x: auto;
+
+    .query_bar {
+        padding: 5px;
+        text-align: left;
+        display: flex;
+        position: relative;
+        background-color: #fff;
+
+        // min-height: 30px;
+        .query_btn {
+            min-width: 190px;
+            flex: 180px;
+            height: 30px;
+            position: absolute;
+            right: 5px;
+
+            .unfold_btn {
+                color: #41b584;
+                padding-left: 5px;
+                cursor: pointer;
+                user-select: none;
+
+                i {
+                    position: relative;
+                    left: -8px;
+                }
+            }
+        }
+
+        .query_box {
+            // min-width : 1044px;
+            box-sizing: border-box;
+            overflow: hidden;
+            margin-top: 40px;
+
+            .zy_box {
+                margin-bottom: 10px;
+                width: 340px;
+                text-align: left;
+
+                .search_desc {
+                    text-align: right;
+                    line-height: 32px;
+                }
+
+                .search_box {
+                    text-align: left;
+                }
+            }
+        }
+    }
+
+    .utils_bar {
+        height: 36px;
+        line-height: 36px;
+        text-align: right;
+        padding: 0 10px;
+        background-color: #fff;
+        // border: #41b584 1px solid;
+    }
+
+    .table_content {
+        background-color: #fff;
+        box-sizing: border-box;
+        overflow-y: auto;
+        overflow-x: hidden;
+        height: calc(100vh - 220px);
+
+        .table_style {
+            width: 100%;
+        }
+
+        .pagination {
+            .el-pagination {
+                text-align: right;
+            }
+        }
+    }
+}
+
+//cosmo 通用表格表头色
+.el-table {
+    thead {
+        tr {
+            th {
+                background-color: var(--themeColor, $base-color-default) !important; //可随主题变色
+
+                .cell {
+                    color: #fff !important
+                }
+            }
+        }
+    }
+}
+
+.el-table--border th,
+.el-table--border td {
+    border-right: 1px solid #222;
+}
+
+.el-table th.is-leaf,
+.el-table td {
+    border-bottom: 1px solid #222;
+}
+
+.el-table--group,
+.el-table--border {
+    border: 1px solid #222;
+}
+
+.el-table__body tr {
+    &:hover {
+        &>td {
+            background-color: #ccc !important;
+        }
+    }
+
+    &.current-row {
+        &>td {
+            background-color: #ccc !important;
+            color: #fff;
+        }
+    }
+}
+
+.el-table--striped .el-table__body tr.el-table__row--striped td {
+    background: #efefef;
+}
+
+/* 图表组件 */
+.common_chart {
+    min-height: inherit;
+}
+
+.clear_fix::after,
+.clear_fix::before {
+    display: block;
+    content: "";
+    clear: both;
+    visibility: hidden;
+    height: 0;
+}
+
+//对table type="mini"修改
+.el-table--mini.el-table {
+    td {
+        padding: 0;
+    }
+
+    th {
+        padding: 0;
+    }
+}
+
+//查询中心 属性背景色
+.attr_title {
+    background-color: #f6f6f6;
+    border-radius: 10px;
+    padding-left: 5px;
+}
+
+//下拉框多列样式
+.option_container {
+    display: flex;
+
+    span {
+        flex: 5;
+
+        &:last-child {
+            text-align: right;
+        }
+    }
+}
+
+.el-pager {
+    color: #ccc
+}
+
+/* 应用程序 */
+.unitStatusBG1 {
+    .el-input__inner {
+        background-color: #07b407;
+        color: #fff;
+    }
+}
+
+.unitStatusBG2 {
+    .el-input__inner {
+        background-color: #ff0000;
+        color: #000;
+    }
+}
+
+.unitStatusBG3 {
+    .el-input__inner {
+        background-color: #ffa500;
+        color: #222;
+    }
+}
+
+.unitStatusBG4 {
+    .el-input__inner {
+        background-color: #d3d3d3;
+        color: #222;
+    }
+}
+
+/* .unitStatus1 {
+    color: #07b407;
+}
+
+.unitStatus2 {
+    color: #ff0000;
+}
+
+.unitStatus3 {
+    color: #ffa500;
+}
+
+.unitStatus4 {
+    color: #000;
+}
+ */
+.unitStatusColor1 {
+    color: #07b407;
+
+    .el-input {
+        .el-input__inner {
+            color: #07b407;
+        }
+    }
+}
+
+.unitStatusColor2 {
+    color: #ff0000;
+
+    .el-input {
+        .el-input__inner {
+            color: #ff0000;
+        }
+    }
+}
+
+.unitStatusColor3 {
+    color: #ffa500;
+
+    .el-input {
+        .el-input__inner {
+            color: #ffa500;
+        }
+    }
+}
+
+.unitStatusColor4 {
+    color: #d3d3d3;
+
+    .el-input {
+        .el-input__inner {
+            color: #d3d3d3;
+        }
+    }
+}
+.show_defect_code{
+  font-size: 20px;
+}
+

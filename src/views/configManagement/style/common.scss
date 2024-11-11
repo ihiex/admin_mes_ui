@@ -1,0 +1,15 @@
+.select_option{
+  position: relative;
+  text-align: left;
+  width: auto;
+  &>span{
+    &:first-child{
+      position: absolute;
+      left: 0;
+    }
+    &:nth-child(2){
+      position: absolute;
+      right: 5px;
+    }
+  }
+}
